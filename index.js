@@ -12,5 +12,26 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(element => {
+      const tutorialWords = element.split(' '); 
+      const tutorialCap =  tutorialWords.map(tutorialWord => tutorialWord.charAt(0).toUpperCase() + tutorialWord.slice(1));
+      let annoyingAnswer = tutorialCap.join(' ');
+      return annoyingAnswer;
+  })
 }
+
+//     let tutorialLower= tutorial.toLowerCase().split(' ');
+//     return tutorialLower.charAt(0).toUpperCase()
+//   })
+// }
+// const titleCased = () => {
+//   return tutorials.map(tutorials() {
+//     //let tutorialLower= tutorial.toLowerCase().split(' ');
+//     let tutorialLower = tutorial.toLowerCase().split(' ')
+//     return tutorialLower.charAt(0).toUpperCase()
+//   })
+// }
+
+// const mappedTutorials = tutorials.map(function(tutorial){
+//   return tutorial
+// })
